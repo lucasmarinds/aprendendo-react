@@ -1,34 +1,44 @@
-This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
+Essa é uma aplicação em [Next.js](https://nextjs.org/) criada com o comando [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
 
-## Getting Started
+## Para startar a app 
 
-First, run the development server:
+Rodando o Servidor
 
 ```bash
 npm run dev
-# or
+# ou
 yarn dev
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+Abra [http://localhost:3000](http://localhost:3000) no seu browser para acessar a aplicação.
 
-You can start editing the page by modifying `pages/index.js`. The page auto-updates as you edit the file.
+#
+## Iniciando com NextJS
+Algo que deve saber primeiramente que com o NextJS a navegação entre paginas é extremamente boa por conta que para podermos acessar uma pagina de um componente ativo, basta criarmos esse componente ou pagina dentro da pasta pages, igual temos com as pastas de aprendizado que é a basico/componentes entre outros, isso é uma facilidade que o nextJS nos fornece em sua estrutura. Para acessarmos um componente funcional basta colocarmos.<br>
+[http://localhost:3000/basico/primeiro](http://localhost:3000/basico/primeiro)<br>
+Bom agora que já sabe o inicio, vamos dar continuidade.
 
-[API routes](https://nextjs.org/docs/api-routes/introduction) can be accessed on [http://localhost:3000/api/hello](http://localhost:3000/api/hello). This endpoint can be edited in `pages/api/hello.js`.
+#
+## JSX
+Esse é como podemos inserir código HTML dentro de códigos JS ou TS, exemplo:
+```bash
+JSX
+export default funcaoUm(){
+    return <h1>Ola Mundo</h1>
+}
+Sem JSX
+export default funcaoDois(){
+    return "Ola Mundo"
+}
+```
+Com o JSX podemos passar já tags de HTML dentro de nosso código JS, isso é possivel porque o REACT, por de baixo traduz em código JS ou ele já manipula o DOM de vez de criar um elemento do tipo react etc... para poder ser executado no browser, porquse se no console você tentar rodar as 2 funções uma irá funcionar que seria a funcaoDois enquanto a primeira o browser nao entenderia porque tem uma tag HTML dentro do retorno da funcaoUm.
 
-The `pages/api` directory is mapped to `/api/*`. Files in this directory are treated as [API routes](https://nextjs.org/docs/api-routes/introduction) instead of React pages.
+#
+## CSS
+### REACT
+Em react a utilização de CSS em componentes é feita de maneira global logo, você só precisa ficar atento ao className de seus elementos e suas hierarquias no css.
+### NEXTJS
+Com nextJS isso é mais organizado porque o NEXTJS trás com a mesma intenção que outros frameworks de JS como Angular de deixar o CSS mais responsavel possivel, digo de vez de deixarmos o CSS como escopo global, ele trás uma outra maneira mais segura também que seria CADA COMPONENTE tem seu CSS, mas também não te impede de ter css global para suas paginas, em NEXT dentro de pages/ temos o arquivo _app.js e dentro dele perceba que tem um import " import '../styles/globals.css' " e nesse css todas as paginas que estão dentro de pages que tem as mesmas classNames que tem no arquivo globals.css que está sendo importado usaram o estilo do globals.
 
-## Learn More
 
-To learn more about Next.js, take a look at the following resources:
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
-
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js/) - your feedback and contributions are welcome!
-
-## Deploy on Vercel
-
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/deployment) for more details.
