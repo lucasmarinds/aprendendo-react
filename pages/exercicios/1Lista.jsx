@@ -15,6 +15,9 @@ export default function exercicioLista(){
         <div>
             {listaTags(111)}
         </div>
+        <div>
+            {listaTags()}
+        </div>
     </div>
     )
 }
